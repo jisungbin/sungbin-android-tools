@@ -34,4 +34,5 @@ include(
   ":toast",
   ":string",
   ":magic-number",
+  ":bom",
 )
