@@ -5,25 +5,20 @@
  * Please see full license: https://github.com/jisungbin/sungbin-android-tools/blob/main/LICENSE
  */
 
-@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
-
 import org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension
 
 plugins {
   kotlin("android")
-  android("application")
+  android("library")
 }
 
 android {
-  namespace = "land.sungbin.android.dev.tool"
+  namespace = "land.sungbin.android.dev.tool.toast"
 
   compileSdk = 34
 
   defaultConfig {
     minSdk = 21
-    targetSdk = 34
-    versionCode = 1
-    versionName = "0.1.0"
   }
 
   sourceSets {
@@ -40,10 +35,6 @@ android {
   }
 }
 
-dependencies {
-  implementations(
-    projects.toast,
-    projects.string,
-    projects.magicNumber,
-  )
+kotlin {
+  explicitApi()
 }
