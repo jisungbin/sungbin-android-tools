@@ -45,7 +45,7 @@ jobs:
           gradle-home-cache-cleanup: true
           cache-write-only: false
           cache-read-only: true
-          arguments: :sgp:dokkaHtml --no-configuration-cache
+          arguments: dokkaHtmlMultiModule --no-configuration-cache
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
