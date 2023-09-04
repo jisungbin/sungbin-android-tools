@@ -29,4 +29,9 @@ buildCache {
   }
 }
 
-include(":sample")
+include(
+  ":sample",
+  ":toast",
+  ":string",
+  ":magic-number",
+)
