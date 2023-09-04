@@ -1,0 +1,1 @@
+![string](https://img.shields.io/maven-central/v/land.sungbin.sat/sat-string?style=flat-square)

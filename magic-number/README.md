@@ -1,0 +1,1 @@
+![magicnumber](https://img.shields.io/maven-central/v/land.sungbin.sat/sat-magicnumber?style=flat-square)

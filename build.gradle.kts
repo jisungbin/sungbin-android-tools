@@ -12,9 +12,13 @@ import org.jlleitschuh.gradle.ktlint.KtlintExtension
 plugins {
   alias(libs.plugins.kotlin.detekt)
   alias(libs.plugins.kotlin.ktlint)
+  alias(libs.plugins.kotlin.dokka)
   alias(libs.plugins.gradle.dependency.handler.extensions)
-  alias(libs.plugins.androidLibrary) apply false
-  alias(libs.plugins.kotlinAndroid) apply false
+  alias(libs.plugins.gradle.publish.maven) apply false
+}
+
+tasks.dokkaHtmlMultiModule {
+  outputDirectory.set(rootDir.resolve("docs"))
 }
 
 buildscript {
@@ -24,6 +28,7 @@ buildscript {
   }
 
   dependencies {
+    classpath(libs.kotlin.dokka)
     classpath(libs.kotlin.gradle)
     classpath(libs.gradle.android)
   }
@@ -36,8 +41,10 @@ allprojects {
   }
 
   apply {
+    plugin(rootProject.libs.plugins.kotlin.dokka.get().pluginId)
     plugin(rootProject.libs.plugins.kotlin.detekt.get().pluginId)
     plugin(rootProject.libs.plugins.kotlin.ktlint.get().pluginId)
+    plugin(rootProject.libs.plugins.gradle.publish.maven.get().pluginId)
     plugin(rootProject.libs.plugins.gradle.dependency.handler.extensions.get().pluginId)
   }
 

@@ -1,0 +1,1 @@
+![toast](https://img.shields.io/maven-central/v/land.sungbin.sat/sat-toast?style=flat-square)
