@@ -1,0 +1,39 @@
+complexity:
+  LongMethod:
+    threshold: 100
+  LongParameterList:
+    active: false
+  TooManyFunctions:
+    active: false
+  ComplexCondition:
+    threshold: 7
+
+performance:
+  SpreadOperator:
+    active: false
+
+style:
+  MagicNumber:
+    active: false
+  ForbiddenComment:
+    active: false
+  ThrowsCount:
+    active: false
+  ReturnCount:
+    active: false
+  LoopWithTooManyJumpStatements:
+    active: false
+  DestructuringDeclarationWithTooManyEntries:
+    active: false
+  MaxLineLength:
+    active: false
+
+naming:
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9_]*'
+  MatchingDeclarationName:
+    active: false
+  VariableNaming:
+    active: false
+  PackageNaming:
+    packagePattern: '[a-z]+(\._?[_?A-Za-z0-9]*)*'

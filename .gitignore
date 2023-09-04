@@ -1,0 +1,14 @@
+**/.idea/*
+!/.idea/icon.png
+!/.idea/vcs.xml
+!/.idea/copyright
+!/.idea/codeStyleSettings.xml
+!/.idea/codeStyles
+!/.idea/dictionaries
+!/.idea/inspectionProfiles
+!/.idea/runConfigurations
+*.iml
+.gradle
+docs
+build
+local.properties
